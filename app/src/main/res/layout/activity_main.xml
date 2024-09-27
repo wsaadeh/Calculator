@@ -1,19 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:ignore="HardcodedText"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="20dp">
+        <TextView
+            android:id="@+id/workingsTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:lines="2"
+            android:maxLines="2"
+            android:textAlignment="textEnd"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/resultsTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.175" />
+        <TextView
+            android:id="@+id/resultsTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:lines="1"
+            android:maxLines="1"
+            android:textAlignment="textEnd"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.175" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        style="@style/buttonRow"
+        >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            style="@style/buttonGray"
+            android:text="C"
+            app:backgroundTint="@null"
+            android:onClick="allClearAction"/>
+        <Button
+            style="@style/buttonGray"
+            android:text="±"
+            app:backgroundTint="@null"
+            android:onClick="changeSign"/>
+        <Button
+            style="@style/buttonGray"
+            android:text="%"
+            app:backgroundTint="@null"
+            android:onClick="percent"/>
+        <Button
+            style="@style/buttonOperator"
+            android:text="/"
+            app:backgroundTint="@null"
+            />
+    </LinearLayout>
+    <LinearLayout
+        style="@style/buttonRow"
+        >
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="7"
+            app:backgroundTint="@null"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="8"
+            app:backgroundTint="@null"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="9"
+            app:backgroundTint="@null"/>
+        <Button
+            style="@style/buttonOperator"
+            android:text="x"
+            app:backgroundTint="@null"
+            />
+    </LinearLayout>
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="4"
+            app:backgroundTint="@null"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="5"
+            app:backgroundTint="@null"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="6"
+            app:backgroundTint="@null"/>
+        <Button
+            style="@style/buttonOperator"
+            android:text="-"
+            app:backgroundTint="@null"/>
+    </LinearLayout>
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="1"
+            app:backgroundTint="@null"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="2"
+            app:backgroundTint="@null"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="3"
+            app:backgroundTint="@null"/>
+        <Button
+            style="@style/buttonOperator"
+            android:text="+"
+            app:backgroundTint="@null"/>
+    </LinearLayout>
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            style="@style/buttonNumber"
+            android:text="."
+            app:backgroundTint="@null"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="0"
+            app:backgroundTint="@null"/>
+        <Button
+            style="@style/buttonNumber"
+            android:text="⌫"
+            app:backgroundTint="@null"
+            android:onClick="backSpaceAction"/>
+        <Button
+            style="@style/buttonOperator"
+            android:text="="
+            app:backgroundTint="@null"
+            android:onClick="equalsAction"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
