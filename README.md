@@ -17,6 +17,7 @@ This project is a app Android Native with kotlin language. The main objective of
 - MutableList
 - For Loop
 - findViewById
+- Styles.xml
   
 
 
